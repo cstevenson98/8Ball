@@ -1,5 +1,6 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/vec3.hpp>
 
 #include <stdio.h>
 #include <iostream>
@@ -16,10 +17,11 @@
 #include "linear.h"
 #include "App.h"
 #include "CueSports.h"
+#include "Ball.h"
 
 ////////////////////////////////////////////////////////////////////////////
-unsigned int widthX = 500;
-unsigned int widthY = 500;
+unsigned int widthX = 2000;
+unsigned int widthY = 1000;
 std::string title = "8Ball";
 ////////////////////////////////////////////////////////////////////////////
 
@@ -49,12 +51,14 @@ int main(void)
 	vect2f vect = circle( { 0., 0.}, 1.0, 14, 14 );
 	vect.print();
 
-	CueGame myGame;
+	PoolBall myBall(widthX, widthY, widthY/15.);
+
+	//CueGame myGame(widthX, widthY);
 
 	// Main loop with timer to track frame times
 	App::Timer timer;
 	float t = 0;
-    while (!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window))
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -62,7 +66,9 @@ int main(void)
 		t += dt;
 
 		// Update code goes here.
-		myGame.Draw();
+		//myGame.Draw();
+		myBall.Draw();
+		myBall.Update(dt);
 		GLCall( glfwSwapBuffers(window) );
 		GLCall( glfwPollEvents() );
 	}

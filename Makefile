@@ -1,18 +1,19 @@
 #!/bin/bash
 
-CC=nvcc
+CC=g++
+INCLUDE=-Iinclude
 LDFLAGS=-lGLEW -lGLU -lGL -lglfw
-DEBUG=-lineinfo
+DEBUG=-g
 
-OBJ=src/App.o src/linear.o src/CueSports.o src/openGLutils.o src/main.o
+OBJ=src/stb_image.o src/App.o src/linear.o src/Ball.o src/CueSports.o src/openGLutils.o src/main.o
 all: $(OBJ)
 	$(CC) $(OBJ) $(LDFLAGS) $(DEBUG) -o main
 
 %.o: %.cpp
-	$(CC) $(LDFLAGS) $(DEBUG) -c $< -o $@
+	$(CC) $(INCLUDE) $(LDFLAGS) $(DEBUG) -c $< -o $@
 
 %.o: %.cu
-	$(CC) $(LDFLAGS) $(DEBUG) -c $< -o $@
+	$(CC) $(INCLUDE) $(LDFLAGS) $(DEBUG) -c $< -o $@
 
 clean:
 	rm -v src/*.o

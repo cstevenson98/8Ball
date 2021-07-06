@@ -1,4 +1,5 @@
 #pragma once
+
 #include <GL/glew.h>
 #include <iostream>
 #include <string>
@@ -6,6 +7,10 @@
 #include <unordered_map>
 #include <fstream>
 #include <sstream>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // ERROR HANDLING 
@@ -40,7 +45,6 @@ struct VertexBufferElement
 			case GL_UNSIGNED_INT: return 4;
 			case GL_UNSIGNED_BYTE: return 1;
 		}
-		ASSERT(false);
 		return 0;
 	}	
 };
@@ -169,6 +173,7 @@ public:
 	void SetUniform4f(const std::string& name, float f0, float f1, float f2, float f3);
 	void SetUniform1f(const std::string& name, float value);
 	void SetUniform1fv(const std::string& name, std::vector<float> data);
+	void SetUniform4mf(const std::string& name, const glm::mat4 &mat);
 
 private:
 	int GetUniformLocation(const std::string& name);

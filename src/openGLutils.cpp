@@ -194,6 +194,11 @@ void Shader::SetUniform4f(const std::string& name, float f0, float f1, float f2,
 	GLCall( glUniform4f(GetUniformLocation(name), f0, f1, f2, f3) );
 }
 
+void Shader::SetUniform4mf(const std::string& name, const glm::mat4 &mat)
+{
+	GLCall( glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]) );
+}
+
 enum ShaderType
 {
 	NONE = -1, VERTEX = 0, FRAGMENT = 1
@@ -209,6 +214,7 @@ struct ShaderProgramSource Shader::ParseShader(const std::string& filepath)
 
 	while (getline(stream, line))
 	{
+		std::cout << line << std::endl;
 		if (line.find("#shader") != std::string::npos)
 		{
 			if (line.find("vertex") != std::string::npos)
@@ -221,7 +227,7 @@ struct ShaderProgramSource Shader::ParseShader(const std::string& filepath)
 			ss[(int)type] << line << '\n';
 		}
 	}
-
+	std::cout << std::endl;
 	struct ShaderProgramSource sps = { ss[0].str(), ss[1].str() };
 	return sps;
 }

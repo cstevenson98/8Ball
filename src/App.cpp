@@ -4,6 +4,7 @@
 void App::init(GLFWwindow** window, int widthX, int widthY, std::string title)
 {
     glfwInit();
+	glfwWindowHint(GLFW_SAMPLES, 4);
     *window = glfwCreateWindow(widthX, widthY, title.data(), NULL, NULL);
 	if (!window)
 	{ 
@@ -17,6 +18,8 @@ void App::init(GLFWwindow** window, int widthX, int widthY, std::string title)
 	
 	if (glewInit() != GLEW_OK)
 		std::cout << "Something went wrong in GLEW init" << std::endl;
+
+	glEnable(GL_MULTISAMPLE);
 }
 
 float App::Timer::dt()

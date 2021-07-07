@@ -1,0 +1,1508 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     56268,       1500]
+NotebookOptionsPosition[     53589,       1455]
+NotebookOutlinePosition[     53993,       1471]
+CellTagsIndexPosition[     53950,       1468]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RGBvalues", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"251", ",", "255", ",", "227"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"220", ",", "247", ",", "45"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "70", ",", "143"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"252", ",", "11", ",", "18"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"61", ",", "28", ",", "109"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"250", ",", "108", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "117", ",", "60"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"105", ",", "29", ",", "33"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8345786062505736`*^9, 3.8345786062696376`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"98195576-b3e4-44b5-b3fd-1604f516b29d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ballColorList", "=", 
+  RowBox[{"RGBColor", "/@", 
+   RowBox[{"(", 
+    RowBox[{"RGBvalues", "/", "255"}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.8345786108781695`*^9, 3.8345786108932204`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"98ef2b2c-129c-4ffd-ae19-07718c4bbdd2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[251, 255], 1, 
+          Rational[227, 255]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.6562091503267974, 0.6666666666666666, 0.5934640522875817],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["251", "255"], ",", "1", ",", 
+             FractionBox["227", "255"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[251, 255], 1, 
+           Rational[227, 255]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[251, 255], 1, 
+      Rational[227, 255]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[44, 51], 
+          Rational[247, 255], 
+          Rational[3, 17]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.5751633986928104, 0.6457516339869281, 0.11764705882352941`],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["44", "51"], ",", 
+             FractionBox["247", "255"], ",", 
+             FractionBox["3", "17"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[44, 51], 
+           Rational[247, 255], 
+           Rational[3, 17]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[44, 51], 
+      Rational[247, 255], 
+      Rational[3, 17]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[2, 255], 
+          Rational[14, 51], 
+          Rational[143, 255]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.00522875816993464, 0.1830065359477124, 0.3738562091503268],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["2", "255"], ",", 
+             FractionBox["14", "51"], ",", 
+             FractionBox["143", "255"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[2, 255], 
+           Rational[14, 51], 
+           Rational[143, 255]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[2, 255], 
+      Rational[14, 51], 
+      Rational[143, 255]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[84, 85], 
+          Rational[11, 255], 
+          Rational[6, 85]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.6588235294117647, 0.02875816993464052, 0.047058823529411764`],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["84", "85"], ",", 
+             FractionBox["11", "255"], ",", 
+             FractionBox["6", "85"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[84, 85], 
+           Rational[11, 255], 
+           Rational[6, 85]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[84, 85], 
+      Rational[11, 255], 
+      Rational[6, 85]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[61, 255], 
+          Rational[28, 255], 
+          Rational[109, 255]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.15947712418300652`, 0.07320261437908497, 0.2849673202614379],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["61", "255"], ",", 
+             FractionBox["28", "255"], ",", 
+             FractionBox["109", "255"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[61, 255], 
+           Rational[28, 255], 
+           Rational[109, 255]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[61, 255], 
+      Rational[28, 255], 
+      Rational[109, 255]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[50, 51], 
+          Rational[36, 85], 0], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[0.6535947712418301, 0.2823529411764706, 0.],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["50", "51"], ",", 
+             FractionBox["36", "85"], ",", "0"}], "}"}], "]"}], NumberMarks -> 
+       False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[50, 51], 
+           Rational[36, 85], 0]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[50, 51], 
+      Rational[36, 85], 0}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[2, 255], 
+          Rational[39, 85], 
+          Rational[4, 17]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.00522875816993464, 0.3058823529411765, 0.1568627450980392],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["2", "255"], ",", 
+             FractionBox["39", "85"], ",", 
+             FractionBox["4", "17"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[2, 255], 
+           Rational[39, 85], 
+           Rational[4, 17]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[2, 255], 
+      Rational[39, 85], 
+      Rational[4, 17]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[
+          Rational[7, 17], 
+          Rational[29, 255], 
+          Rational[11, 85]], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[
+        0.27450980392156865`, 0.07581699346405228, 0.08627450980392157],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{
+             FractionBox["7", "17"], ",", 
+             FractionBox["29", "255"], ",", 
+             FractionBox["11", "85"]}], "}"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[
+           Rational[7, 17], 
+           Rational[29, 255], 
+           Rational[11, 85]]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{
+      Rational[7, 17], 
+      Rational[29, 255], 
+      Rational[11, 85]}],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[0, 0, 0], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[0., 0., 0.],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "0"}], "}"}], "]"}], NumberMarks -> 
+       False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[0, 0, 0]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[{0, 0, 0}],
+    Editable->False,
+    Selectable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.834578623812067*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"1383761b-e255-4734-be35-c793f6355258"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PoolBallGraphic", "[", "ballNumber_", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"stripColor", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"ballNumber", "\[LessEqual]", "8"}], ",", 
+         RowBox[{"ballColorList", "\[LeftDoubleBracket]", 
+          RowBox[{"ballNumber", "+", "1"}], "\[RightDoubleBracket]"}], ",", 
+         RowBox[{
+         "ballColorList", "\[LeftDoubleBracket]", "1", 
+          "\[RightDoubleBracket]"}]}], "]"}]}], ",", 
+      RowBox[{"ballColor", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"ballNumber", "\[LessEqual]", "8"}], ",", 
+         RowBox[{"ballColorList", "\[LeftDoubleBracket]", 
+          RowBox[{"ballNumber", "+", "1"}], "\[RightDoubleBracket]"}], ",", 
+         RowBox[{"ballColorList", "\[LeftDoubleBracket]", 
+          RowBox[{"ballNumber", "-", "7"}], "\[RightDoubleBracket]"}]}], 
+        "]"}]}]}], "}"}], ",", 
+    RowBox[{"Return", "@", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"stripColor", ",", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"2", "/", "3"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", 
+              RowBox[{"3", "/", "3"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"ballColor", ",", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"1", "/", "3"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", 
+              RowBox[{"2", "/", "3"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"stripColor", ",", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"0", "/", "3"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", 
+              RowBox[{"1", "/", "3"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+          "ballColorList", "\[LeftDoubleBracket]", "1", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0.5", ",", 
+              RowBox[{"1", "/", "2"}]}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"1", "/", "4"}], "-", 
+             RowBox[{"1", "/", "20"}]}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"ballNumber", ">", "0"}], ",", 
+             RowBox[{"ToString", "[", "ballNumber", "]"}], ",", "\"\<\>\""}], 
+            "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0.5", ",", 
+             RowBox[{"1", "/", "2"}]}], "}"}]}], "]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+          "ballColorList", "\[LeftDoubleBracket]", "1", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1.5", ",", 
+              RowBox[{"1", "/", "2"}]}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"1", "/", "4"}], "-", 
+             RowBox[{"1", "/", "20"}]}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"ballNumber", ">", "0"}], ",", 
+             RowBox[{"ToString", "[", "ballNumber", "]"}], ",", "\"\<\>\""}], 
+            "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1.5", ",", 
+             RowBox[{"1", "/", "2"}]}], "}"}]}], "]"}], "}"}]}], "}"}], 
+      "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8345786155012836`*^9, 3.8345786155173383`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"78163325-db21-4306-9c50-3fc5b00ccce2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"PoolBallGraphic", "[", "i", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "0", ",", "15"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8345786211101255`*^9, 3.834578621127183*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"be9ead6b-c23b-45ff-b51b-9a59729a49f4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[44, 51], 
+         Rational[247, 255], 
+         Rational[3, 17]}, {0.8627450980392157, 0.9686274509803922, 
+        0.17647058823529413`}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[44, 51], 
+         Rational[247, 255], 
+         Rational[3, 17]}, {0.8627450980392157, 0.9686274509803922, 
+        0.17647058823529413`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[44, 51], 
+         Rational[247, 255], 
+         Rational[3, 17]}, {0.8627450980392157, 0.9686274509803922, 
+        0.17647058823529413`}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"1\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"1\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[14, 51], 
+         Rational[143, 255]}, {0.00784313725490196, 0.27450980392156865`, 
+        0.5607843137254902}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[14, 51], 
+         Rational[143, 255]}, {0.00784313725490196, 0.27450980392156865`, 
+        0.5607843137254902}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[14, 51], 
+         Rational[143, 255]}, {0.00784313725490196, 0.27450980392156865`, 
+        0.5607843137254902}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"2\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"2\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[84, 85], 
+         Rational[11, 255], 
+         Rational[6, 85]}, {0.9882352941176471, 0.043137254901960784`, 
+        0.07058823529411765}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[84, 85], 
+         Rational[11, 255], 
+         Rational[6, 85]}, {0.9882352941176471, 0.043137254901960784`, 
+        0.07058823529411765}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[84, 85], 
+         Rational[11, 255], 
+         Rational[6, 85]}, {0.9882352941176471, 0.043137254901960784`, 
+        0.07058823529411765}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"3\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"3\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[61, 255], 
+         Rational[28, 255], 
+         Rational[109, 255]}, {0.23921568627450981`, 0.10980392156862745`, 
+        0.42745098039215684`}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[61, 255], 
+         Rational[28, 255], 
+         Rational[109, 255]}, {0.23921568627450981`, 0.10980392156862745`, 
+        0.42745098039215684`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[61, 255], 
+         Rational[28, 255], 
+         Rational[109, 255]}, {0.23921568627450981`, 0.10980392156862745`, 
+        0.42745098039215684`}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"4\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"4\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[50, 51], 
+         Rational[36, 85], 0}, {0.9803921568627451, 0.4235294117647059, 0}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[50, 51], 
+         Rational[36, 85], 0}, {0.9803921568627451, 0.4235294117647059, 0}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[50, 51], 
+         Rational[36, 85], 0}, {0.9803921568627451, 0.4235294117647059, 0}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"5\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"5\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[39, 85], 
+         Rational[4, 17]}, {0.00784313725490196, 0.4588235294117647, 
+        0.23529411764705882`}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[39, 85], 
+         Rational[4, 17]}, {0.00784313725490196, 0.4588235294117647, 
+        0.23529411764705882`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[39, 85], 
+         Rational[4, 17]}, {0.00784313725490196, 0.4588235294117647, 
+        0.23529411764705882`}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"6\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"6\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[7, 17], 
+         Rational[29, 255], 
+         Rational[11, 85]}, {0.4117647058823529, 0.11372549019607843`, 
+        0.12941176470588237`}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[7, 17], 
+         Rational[29, 255], 
+         Rational[11, 85]}, {0.4117647058823529, 0.11372549019607843`, 
+        0.12941176470588237`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[7, 17], 
+         Rational[29, 255], 
+         Rational[11, 85]}, {0.4117647058823529, 0.11372549019607843`, 
+        0.12941176470588237`}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"7\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"7\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[0, 0, 0], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[0, 0, 0], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[0, 0, 0], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"8\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"8\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[44, 51], 
+         Rational[247, 255], 
+         Rational[3, 17]}, {0.8627450980392157, 0.9686274509803922, 
+        0.17647058823529413`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"9\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"9\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[14, 51], 
+         Rational[143, 255]}, {0.00784313725490196, 0.27450980392156865`, 
+        0.5607843137254902}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"10\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"10\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[84, 85], 
+         Rational[11, 255], 
+         Rational[6, 85]}, {0.9882352941176471, 0.043137254901960784`, 
+        0.07058823529411765}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"11\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"11\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[61, 255], 
+         Rational[28, 255], 
+         Rational[109, 255]}, {0.23921568627450981`, 0.10980392156862745`, 
+        0.42745098039215684`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"12\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"12\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[50, 51], 
+         Rational[36, 85], 0}, {0.9803921568627451, 0.4235294117647059, 0}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"13\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"13\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[2, 255], 
+         Rational[39, 85], 
+         Rational[4, 17]}, {0.00784313725490196, 0.4588235294117647, 
+        0.23529411764705882`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"14\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"14\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}], ",", 
+   GraphicsBox[{
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[
+       NCache[{0, Rational[2, 3]}, {0, 0.6666666666666666}], {2, 1}]}, 
+     {RGBColor[
+       NCache[{
+         Rational[7, 17], 
+         Rational[29, 255], 
+         Rational[11, 85]}, {0.4117647058823529, 0.11372549019607843`, 
+        0.12941176470588237`}]], 
+      RectangleBox[NCache[{0, Rational[1, 3]}, {0, 0.3333333333333333}], 
+       NCache[{2, Rational[2, 3]}, {2, 0.6666666666666666}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      RectangleBox[{0, 0}, 
+       NCache[{2, Rational[1, 3]}, {2, 0.3333333333333333}]]}, 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"15\"\>", NCache[{0.5, Rational[1, 2]}, {0.5, 0.5}]], 
+     {RGBColor[
+       NCache[{
+         Rational[251, 255], 1, 
+         Rational[227, 255]}, {0.984313725490196, 1, 0.8901960784313725}]], 
+      DiskBox[NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}], NCache[
+       Rational[1, 5], 0.2]]}, 
+     InsetBox["\<\"15\"\>", NCache[{1.5, Rational[1, 2]}, {1.5, 0.5}]]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8345786260153604`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"fd60aaab-e192-4c28-8131-3c9965a1b5b6"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.8345786520602875`*^9, 3.8345786652157183`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"f25188a6-d089-4839-a330-538139c2a703"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"num", ",", "\"\<!\>\""}], "]"}], ";", 
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<textures/my8Ball/Ball\>\"", "<>", 
+       RowBox[{"ToString", "[", "num", "]"}], "<>", "\"\<.jpg\>\""}], ",", 
+      RowBox[{"PoolBallGraphic", "[", "num", "]"}], ",", 
+      RowBox[{"ImageResolution", "\[Rule]", "800"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"num", ",", "0", ",", "15"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.83457863677464*^9, 3.8345786480141563`*^9}, {
+  3.834578693482049*^9, 3.8345787657811375`*^9}, {3.8345787993166666`*^9, 
+  3.834578866602874*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"47ded441-ea17-49fa-8c7b-c4e7c724217c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"0", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[0, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.834578867524925*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"3e7c30fb-15f4-458e-9da3-6808e2a17313"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[1, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.8345788682913895`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"8d6c4052-f08d-4d6a-a585-667ea6733039"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"2", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[2, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.834578869069974*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"f3841895-e0a7-4734-a729-76595e33a7a1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"3", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[3, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.8345788698741884`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"f998555c-8b6e-46d5-94a4-9fa645f1b6fa"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"4", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[4, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.834578870669323*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"5b49b454-11a4-4953-97d5-0001f938f367"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"5", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[5, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.8345788715181293`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"23bc4e12-8297-449e-b503-268bb740724b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"6", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[6, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.834578872318782*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"60883be6-56cf-4bad-9125-a9f8812853d0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"7", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[7, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8345788437079506`*^9, 3.8345788731134124`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"9bc2527a-9cb3-466d-bd38-1247c60ad6ca"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"8", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[8, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.834578873905034*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"07a37164-29d0-4d8d-969e-4ff97b060fdf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[9, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.834578874709697*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"71226040-fea7-44e8-8b66-0c90ac1edde7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"10", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[10, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.834578875504227*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"128aed1f-b939-4094-805b-9900345016f0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"11", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[11, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.8345788762988553`*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"7c636bda-f145-4853-906d-e7fa25826885"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"12", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[12, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.8345788770966544`*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"9e5ba339-5d02-49f2-ac47-1a692592f2b9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"13", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[13, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.8345788778825808`*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"57bd1dd2-37a3-4e09-a857-4f6b64857f94"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"14", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[14, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.8345788786620684`*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"4c82ac1b-9069-4bc4-be77-3748395e4bf4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"15", "\[InvisibleSpace]", "\<\"!\"\>"}],
+  SequenceForm[15, "!"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8345788437079506`*^9, 3.8345788794928193`*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"8e0ecf3d-f045-49e8-9a36-1a753b20c39e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{760, 833},
+WindowMargins->{{892, Automatic}, {244, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b66b52ea-090c-4da3-89df-3beac34bd169"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 942, 24, 48, "Input",ExpressionUUID->"98195576-b3e4-44b5-b3fd-1604f516b29d"],
+Cell[CellGroupData[{
+Cell[1525, 48, 299, 6, 28, "Input",ExpressionUUID->"98ef2b2c-129c-4ffd-ae19-07718c4bbdd2"],
+Cell[1827, 56, 17707, 506, 32, "Output",ExpressionUUID->"1383761b-e255-4734-be35-c793f6355258"]
+}, Open  ]],
+Cell[19549, 565, 4079, 109, 219, "Input",ExpressionUUID->"78163325-db21-4306-9c50-3fc5b00ccce2"],
+Cell[CellGroupData[{
+Cell[23653, 678, 330, 7, 28, "Input",ExpressionUUID->"be9ead6b-c23b-45ff-b51b-9a59729a49f4"],
+Cell[23986, 687, 23396, 572, 703, "Output",ExpressionUUID->"fd60aaab-e192-4c28-8131-3c9965a1b5b6"]
+}, Open  ]],
+Cell[47397, 1262, 309, 6, 48, "Input",ExpressionUUID->"f25188a6-d089-4839-a330-538139c2a703"],
+Cell[CellGroupData[{
+Cell[47731, 1272, 770, 17, 67, "Input",ExpressionUUID->"47ded441-ea17-49fa-8c7b-c4e7c724217c"],
+Cell[CellGroupData[{
+Cell[48526, 1293, 311, 8, 22, "Print",ExpressionUUID->"3e7c30fb-15f4-458e-9da3-6808e2a17313"],
+Cell[48840, 1303, 313, 8, 22, "Print",ExpressionUUID->"8d6c4052-f08d-4d6a-a585-667ea6733039"],
+Cell[49156, 1313, 311, 8, 22, "Print",ExpressionUUID->"f3841895-e0a7-4734-a729-76595e33a7a1"],
+Cell[49470, 1323, 313, 8, 22, "Print",ExpressionUUID->"f998555c-8b6e-46d5-94a4-9fa645f1b6fa"],
+Cell[49786, 1333, 311, 8, 22, "Print",ExpressionUUID->"5b49b454-11a4-4953-97d5-0001f938f367"],
+Cell[50100, 1343, 313, 8, 22, "Print",ExpressionUUID->"23bc4e12-8297-449e-b503-268bb740724b"],
+Cell[50416, 1353, 311, 8, 22, "Print",ExpressionUUID->"60883be6-56cf-4bad-9125-a9f8812853d0"],
+Cell[50730, 1363, 313, 8, 22, "Print",ExpressionUUID->"9bc2527a-9cb3-466d-bd38-1247c60ad6ca"],
+Cell[51046, 1373, 309, 8, 22, "Print",ExpressionUUID->"07a37164-29d0-4d8d-969e-4ff97b060fdf"],
+Cell[51358, 1383, 309, 8, 22, "Print",ExpressionUUID->"71226040-fea7-44e8-8b66-0c90ac1edde7"],
+Cell[51670, 1393, 311, 8, 22, "Print",ExpressionUUID->"128aed1f-b939-4094-805b-9900345016f0"],
+Cell[51984, 1403, 313, 8, 22, "Print",ExpressionUUID->"7c636bda-f145-4853-906d-e7fa25826885"],
+Cell[52300, 1413, 313, 8, 22, "Print",ExpressionUUID->"9e5ba339-5d02-49f2-ac47-1a692592f2b9"],
+Cell[52616, 1423, 313, 8, 22, "Print",ExpressionUUID->"57bd1dd2-37a3-4e09-a857-4f6b64857f94"],
+Cell[52932, 1433, 313, 8, 22, "Print",ExpressionUUID->"4c82ac1b-9069-4bc4-be77-3748395e4bf4"],
+Cell[53248, 1443, 313, 8, 22, "Print",ExpressionUUID->"8e0ecf3d-f045-49e8-9a36-1a753b20c39e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

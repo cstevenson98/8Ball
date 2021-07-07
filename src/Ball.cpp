@@ -19,12 +19,8 @@ void PoolBall::InitBuffer()
 
     float dThe =   M_PI/nThe;
     float dPhi = 2*M_PI/nPhi;
-    // Vertices on a sphere by making a grid in spherical coords.
-    // Note that the phi-loop comes back on itself as we
-    // want to connect around the loop. 
-
-    // Poles are omitted in this loop, to be added in to the triangles
-    // buffer by hand.
+    
+    // Sphere:
     for (int i = 0; i < nThe; i++)
     {
         for (int j = 0; j < nPhi; j++)
@@ -43,6 +39,8 @@ void PoolBall::InitBuffer()
 
             glm::vec3 temp = glm::vec3(theta/3.141/2, phi, 0.);
 
+            std::cout << texTheta << " " << texPhi << std::endl;
+
             std::vector<glm::vec3> triangle1[] = {
                 { SphereToCart(radius, theta, phi, pos),  { texPhi, texTheta, 0.} },
                 { SphereToCart(radius, theta, phiP, pos), { texPhiP, texTheta, 0.} },
@@ -50,8 +48,8 @@ void PoolBall::InitBuffer()
             };
 
             std::vector<glm::vec3> triangle2[] = {
-                { SphereToCart(radius, theta, phiP, pos),  { texPhiP,texTheta,  0. } },
-                { SphereToCart(radius, thetaP, phiP, pos), { texPhiP,texThetaP, 0.} },
+                { SphereToCart(radius, theta, phiP, pos),  { texPhiP, texTheta,  0. } },
+                { SphereToCart(radius, thetaP, phiP, pos), { texPhiP, texThetaP, 0.} },
                 { SphereToCart(radius, thetaP, phi, pos),  { texPhi, texThetaP, 0. } }
             };
 
@@ -92,8 +90,8 @@ void PoolBall::Draw()
     m_translation = glm::translate(glm::mat4(1.), glm::vec3(pos.x, pos.y, 0.));
     
     // Set rotation
-    m_rotation = glm::rotate(glm::mat4(1.0f), m_theta + float(M_PI/2.), glm::vec3(0., 1., 0.));
-    m_rotation = glm::rotate(glm::mat4(1.0f), m_phi  + float(M_PI/2.), glm::vec3(0., 0., 1.)) * m_rotation;
+    m_rotation = glm::rotate(glm::mat4(1.0f), m_theta - float(M_PI/2.), glm::vec3(0., 1., 0.));
+    m_rotation = glm::rotate(glm::mat4(1.0f), m_phi + float(M_PI/2.), glm::vec3(0., 0., 1.)) * m_rotation;
     
     // Shader
     m_shader.SetUniform4mf("proj", m_projection * m_translation * m_rotation );
@@ -102,13 +100,14 @@ void PoolBall::Draw()
 
 void PoolBall::Update(float dt)
 {
-    m_theta += dt;
-    m_phi = cos(m_theta/2.);
+    m_phi += dt;
+    m_theta += 2*dt;
 }
 
 void PoolBall::LoadTexture(std::string gameType)
 {
     glBindTexture(GL_TEXTURE_2D, m_texture);
+
 
     std::string name;
     name = "textures/" + gameType + "/Ball" + std::to_string(number) + ".jpg";

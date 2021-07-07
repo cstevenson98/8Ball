@@ -5,7 +5,7 @@ INCLUDE=-Iinclude
 LDFLAGS=-lGLEW -lGLU -lGL -lglfw
 DEBUG=-g
 
-OBJ=src/stb_image.o src/App.o src/linear.o src/Ball.o src/CueSports.o src/openGLutils.o src/main.o
+OBJ=src/Debug.o src/GameEngine.o src/stb_image.o src/App.o src/linear.o src/Ball.o src/CueSports.o src/openGLutils.o src/main.o
 all: $(OBJ)
 	$(CC) $(OBJ) $(LDFLAGS) $(DEBUG) -o main
 
